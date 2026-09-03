@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Mobile Auctions - 2SMARTS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d2a5c;
+            --gold: #D4AF37;
+            --white: #ffffff;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+            background-color: #f4f7fe;
+            color: #333;
+        }
+
+        /* Header */
+        .auction-header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+            background: rgba(0,0,0,0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .market-title {
+            font-size: 26px;
+            color: var(--primary);
+            border-bottom: 3px solid var(--gold);
+            padding-bottom: 10px;
+            margin: 50px 0 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Auction Card */
+        .auction-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eef1f6;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
+        }
+        .bg-japan { background: #009245; }
+        .bg-usa { background: #ea4335; }
+
+        /* Grading Section */
+        .grading-box {
+            background: #f8faff;
+            border-left: 5px solid var(--gold);
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        /* Photo Grid (Strictly 2 Boxes) */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .photo-box {
+            background: #f0f2f5;
+            border: 2px dashed #cbd5e0;
+            border-radius: 12px;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            cursor: pointer;
+        }
+        .photo-box:hover { border-color: var(--gold); background: #fff; }
+
+        @media (max-width: 600px) {
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="auction-header">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <div class="logo-text">🇭🇰 2SMARTS PVT LIMITED 🇭🇰</div>
+        <p style="max-width: 800px; margin: 20px auto; opacity: 0.9;">
+            <strong>We provide professional bidding services</strong> for our clients across top-tier international auctions. 
+            Leveraging direct access to world-class platforms, we ensure premium stock acquisition.
+        </p>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="market-title"><i class="fas fa-globe-asia"></i> Japan Auction Sources</h2>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>Softbank (Japan)</h3>
+                <span class="badge bg-japan">Japan</span>
+            </div>
+            <div class="grading-box">
+                <strong>Grading:</strong> S Grade  Mix (Used).
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+            </div>
+        </div>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>NTT Docomo (Japan)</h3>
+                <span class="badge bg-japan">Japan</span>
+            </div>
+            <div class="grading-box">
+                <strong>Grading:</strong> Grade S, Ap, A1, A2, A3 (Carrier Standard).
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+            </div>
+        </div>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>AU KDDI (Japan)</h3>
+                <span class="badge bg-japan">Japan</span>
+            </div>
+            <div class="grading-box">
+                <strong>Grading:</strong> AS, A, BS, B, CS, C, D
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+            </div>
+        </div>
+
+        <h2 class="market-title"><i class="fas fa-flag-usa"></i> USA Auction Sources</h2>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>HYLA Mobile (USA)</h3>
+                <span class="badge bg-usa">USA</span>
+            </div>
+            <div class="grading-box">
+                <strong>Grading:</strong> TPS AND DLS A+, A, B, B+, C,
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+            </div>
+        </div>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>Mannapov (USA)</h3>
+                <span class="badge bg-usa">USA</span>
+            </div>
+            <div class="grading-box">
+                <strong>Grading:</strong> A, A&B, C&D.
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+            </div>
+        </div>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>AT&T (USA)</h3>
+                <span class="badge bg-usa">USA</span>
+            </div>
+            <div class="grading-box">
+                <strong>Grading:</strong> Carrier Returned Inventory. 
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+            </div>
+        </div>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>T-Mobile (USA)</h3>
+                <span class="badge bg-usa">USA</span>
+            </div>
+            <div class="grading-box">
+                <strong>Grading:</strong> TPS  A B C D.
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+            </div>
+        </div>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>EcoATM (USA)</h3>
+                <span class="badge bg-usa">USA</span>
+            </div>
+            <div class="grading-box">
+                <strong>Grading:</strong> A_YYY, B_NYY, E_YYN.
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+                <div class="photo-box"><i class="fas fa-camera"></i></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

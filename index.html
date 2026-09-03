@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2SMARTS PVT LIMITED | Global Sourcing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* === 1. GLOBAL SETTINGS === */
+        :root {
+            --primary: #1a1a3e;
+            --accent: #00d4ff;
+            --secondary: #ff1b6d;
+            --text-light: #ffffff;
+            --bg-light: #0d1b2a;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #0d1b2a 0%, #1a1a3e 100%); color: var(--primary); line-height: 1.6; min-height: 100vh; }
+
+        /* === 2. HEADER SECTION (Now Fully Independent) === */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            color: var(--text-light);
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+        }
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #FFBF00;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        .tagline {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-top: 5px;
+            color: #ffffff;
+        }
+
+        /* === 3. PREMIUM VERTICAL MENU === */
+        .menu-wrapper {
+            max-width: 450px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(26, 26, 62, 0.95);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 212, 255, 0.2), 0 0 30px rgba(240, 147, 251, 0.1);
+            border: 2px solid rgba(0, 212, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-radius: 12px;
+            background: rgba(102, 126, 234, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-left: 4px solid transparent;
+        }
+        .nav-link i {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+            color: #00d4ff;
+        }
+        .nav-link:hover {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: #00d4ff;
+            border-left: 4px solid #00d4ff;
+            transform: translateX(10px);
+            box-shadow: 0 5px 25px rgba(0, 212, 255, 0.4);
+        }
+        .nav-link.active {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: #00d4ff;
+            border-left: 4px solid #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        /* === 4. CONTENT & CARDS === */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            border-left: 5px solid #00d4ff;
+            padding-left: 15px;
+        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            border-image: linear-gradient(135deg, #00d4ff 0%, #764ba2 100%) 1;
+            box-shadow: 0 5px 25px rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        /* === NEW: DARK MARKET FLOW CARD === */
+        .market-flow {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(240, 147, 251, 0.15) 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+            margin: 20px 0 40px;
+            box-shadow: 0 10px 50px rgba(0, 212, 255, 0.2), inset 0 1px 0 rgba(0, 212, 255, 0.1);
+            border: 2px solid rgba(0, 212, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .market-flow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+        }
+        .market-flow h2 { 
+            color: #00d4ff; 
+            font-size: 1.8rem; 
+            margin-bottom: 25px; 
+            text-transform: uppercase;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+        }
+        .market-flow h3 { 
+            color: #ff1b6d; 
+            margin-bottom: 15px; 
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .market-flow ul { list-style: none; padding: 0; }
+        .market-flow ul li { 
+            margin-bottom: 12px; 
+            font-size: 1rem; 
+            display: flex; 
+            align-items: center; 
+            color: #ffffff;
+        }
+        .market-flow ul li::before { 
+            content: "\f0fb";
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 900; 
+            color: #00d4ff; 
+            margin-right: 12px;
+        }
+
+        /* === Floating Social Buttons === */
+        .social-float {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 2px solid rgba(0, 212, 255, 0.5);
+        }
+        .social-float:hover { 
+            transform: scale(1.15);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Right Side: WhatsApp */
+        .whatsapp-btn {
+            right: 30px;
+            background: linear-gradient(135deg, #25d366 0%, #20ba58 100%);
+        }
+
+        /* Left Side: WeChat */
+        .wechat-btn {
+            left: 30px;
+            background: linear-gradient(135deg, #09b83e 0%, #058630 100%);
+            cursor: pointer;
+        }
+
+        /* Left Side: Email */
+        .email-btn {
+            left: 30px;
+            bottom: 110px;
+            background: linear-gradient(135deg, #ff1b6d 0%, #e60d5a 100%);
+        }
+
+       /* WeChat QR Modal Styling */
+.wechat-modal {
+    display: none;
+    position: fixed; 
+    z-index: 99999;
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center; 
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    padding: 20px; 
+    border-radius: 15px; 
+    text-align: center; 
+    max-width: 300px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+}
+.modal-content img { width: 100%; border-radius: 10px; border: 2px solid #00d4ff; }
+.close-btn { 
+    position: absolute; top: 10px; right: 15px; 
+    font-size: 24px; cursor: pointer; color: #ff1b6d;
+    transition: all 0.3s ease;
+}
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+        /* === 5. FOOTER === */
+        footer {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(240, 147, 251, 0.2) 100%);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 2px solid rgba(0, 212, 255, 0.3);
+            color: #D4AF37;
+        }
+        .footer-address { font-weight: 600; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="company-name">🇭🇰 2SMARTS PVT LIMITED 🇭🇰</div>
+        <p class="tagline">Your Global Sourcing & Tech Partner</p>
+    </header>
+
+    <div class="menu-wrapper">
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+            <a href="app.html" class="nav-link"><i class="fas fa-mobile-alt"></i> Free Business App</a>
+            <a href="auctions.html" class="nav-link"><i class="fas fa-gavel"></i> Mobile Auctions & Company Details</a>
+            <a href="it-solutions.html" class="nav-link"><i class="fas fa-laptop-code"></i> IT Solutions</a>
+         </nav>
+    </div>
+
+    <div class="section-box">
+    <h2 class="section-title">Core Business Operations</h2>
+    <p style="font-size: 1.1rem; line-height: 1.8; color: #333; font-weight: 400;">
+        Specializing in the global trade of <strong>New & Pre-owned Mobile Devices</strong>. We source high-demand electronics stock lots directly from <strong>Hong Kong, Japan, and the USA</strong>, with dedicated support for bulk orders and logistics coordination across all markets.
+    </p>
+</div>
+
+    <div class="market-flow">
+        <h2 style="color: #00d4ff; font-size: 2rem; margin-bottom: 20px; border-bottom: 2px solid rgba(0, 212, 255, 0.3); padding-bottom: 10px; text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);">
+            Global Market Flow
+        </h2>
+        <div class="grid">
+            <div>
+                <h3><i class="fas fa-plane-departure"></i> Suppliers</h3>
+                <ul>
+                    <li>Domestic Hong Kong</li>
+                    <li>East Asia Markets</li>
+                    <li>USA Distributions</li>
+                </ul>
+            </div>
+            <div>
+                <h3><i class="fas fa-plane-arrival"></i> Key Markets</h3>
+                <ul>
+                    <li>Domestic Hong Kong</li>
+                    <li>Middle East </li>
+                    <li>South Asia </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <div class="grid">
+    <div class="card">
+        <h3>📱 Direct Trading</h3>
+        <p>Specializing in the bulk import and export of premium new and pre-owned mobile devices. We ensure a consistent supply of top-tier electronics with competitive market pricing.</p>
+    </div>
+    
+    <div class="card">
+        <h3>🤝 Managed Services</h3>
+        <p>Your dedicated strategic partner in HK. We handle everything from supplier coordination to rigorous quality inspections, ensuring your inventory meets international standards.</p>
+    </div>
+    
+    <div class="card">
+        <h3>📦 Logistics Support</h3>
+        <p>Reliable end-to-end supply chain solutions. We offer high-volume freight consolidation and secure international shipping directly to your warehouse.</p>
+    </div>
+</div>
+
+    <footer>
+        <div class="footer-address">
+            <i class="fas fa-map-marker-alt"color:#D4AF37;"></i> Hang Wan Building, Granville Road, Hong Kong
+        </div>
+        <p>Email: 2smartspvtltd@gmail.com | WA: +852 6025 7569</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">&copy; 2026 2SMARTS PVT LIMITED.</p>
+        
+    </footer> 
+    
+        <a href="https://wa.me/85260257569" class="social-float whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+        <a href="mailto:2smartspvtltd@gmail.com?subject=Business Inquiry" class="social-float email-btn">
+        <i class="fas fa-envelope"></i>
+    </a>
+        <div class="social-float wechat-btn" onclick="openWeChat()">
+        <i class="fab fa-weixin"></i>
+</div>
+
+<div id="wechatModal" class="wechat-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeWeChat()">&times;</span>
+        <h3 style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px;">Connect on WeChat</h3>
+        
+        <img src="wechat-qr.jpg" alt="WeChat QR">
+        
+        <p style="margin-top: 15px; font-weight: bold; color: #1a1a3e; font-size: 1.1rem;">
+            ID: asif555
+        </p>
+        <p style="font-size: 0.85rem; color: #666; padding: 0 10px;">
+            Please <strong>Save QR</strong> or <strong>Copy ID</strong> and search in WeChat app to add us.
+        </p>
+    </div>
+</div>
+
+    <script>
+    function openWeChat() {
+        var modal = document.getElementById("wechatModal");
+        if(modal) {
+            modal.style.display = "flex";
+        }
+
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            window.location.href = "weixin://"; 
+        }
+    }
+
+    function closeWeChat() {
+        document.getElementById("wechatModal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
