@@ -1,1 +1,0 @@
-# 2smarts.github.io
