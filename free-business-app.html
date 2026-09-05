@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Business App | 2SMARTS PVT LIMITED</title>
+    <title>2SMARTS PVT LIMITED | Global Sourcing</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -269,18 +269,85 @@
         footer p { color: #ffffff; }
         footer p:last-child { color: rgba(255,255,255,0.6); }
 
-        /* === Under Construction === */
-        .construction-box {
+        /* === Free App Gallery === */
+        .app-card {
             background: var(--text-light);
             border-radius: 14px;
-            padding: 60px 30px;
-            text-align: center;
+            padding: 30px;
+            margin-bottom: 30px;
             box-shadow: 0 8px 30px rgba(10,24,48,0.1);
             border-top: 5px solid var(--yellow);
         }
-        .construction-box i { font-size: 3.5rem; color: var(--red); margin-bottom: 20px; }
-        .construction-box h2 { color: var(--navy); font-size: 1.8rem; margin-bottom: 12px; }
-        .construction-box p { color: #333; font-size: 1.05rem; max-width: 500px; margin: 0 auto; line-height: 1.7; }
+        .app-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .app-icon-box {
+            width: 60px; height: 60px;
+            background: var(--navy);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .app-icon-box i { color: var(--yellow); font-size: 1.6rem; }
+        .app-card-header h3 { color: var(--navy); font-size: 1.4rem; margin: 0; }
+        .app-card-header p.tag { color: var(--red); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; margin: 2px 0 0; }
+        .app-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .app-feature {
+            background: #f8f9fb;
+            border-left: 4px solid var(--yellow);
+            padding: 14px 16px;
+            border-radius: 6px;
+        }
+        .app-feature h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 4px; }
+        .app-feature p { color: #444; font-size: 0.85rem; margin: 0; }
+        .guide-list { list-style: none; padding: 0; margin: 15px 0; }
+        .guide-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            font-size: 0.92rem;
+        }
+        .guide-list li:last-child { border-bottom: none; }
+        .guide-list .step-num {
+            position: absolute; left: 0; top: 10px;
+            background: var(--navy); color: var(--yellow);
+            width: 20px; height: 20px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; font-weight: 700;
+        }
+        .install-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--navy);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-top: 10px;
+            transition: all 0.25s ease;
+        }
+        .install-btn:hover { background: var(--red); transform: translateY(-2px); }
+        .coming-soon-card {
+            background: #f4f5f7;
+            border: 2px dashed #c3cad6;
+            border-radius: 14px;
+            padding: 40px 30px;
+            text-align: center;
+            color: #8a94a3;
+        }
+        .coming-soon-card i { font-size: 2rem; margin-bottom: 10px; color: var(--navy); opacity: 0.5; }
     </style>
 </head>
 <body>
@@ -305,10 +372,64 @@
     </div>
 
     <div class="container">
-        <div class="construction-box">
-            <i class="fas fa-tools"></i>
-            <h2>Under Construction</h2>
-            <p>Our Free Business App is coming soon. We&rsquo;re currently putting the finishing touches on it &mdash; check back shortly!</p>
+        <div class="section-box">
+            <h2 class="section-title">Free Business Apps</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #333; font-weight: 400;">
+                We build free, lightweight web apps to help small businesses manage their daily operations &mdash; no app store, no subscription, no complicated setup. Just open the link and start using it. More free tools will be added here over time.
+            </p>
+        </div>
+
+        <div class="app-card">
+            <div class="app-card-header">
+                <div class="app-icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
+                <div>
+                    <h3>SmartAcc</h3>
+                    <p class="tag">Invoicing, Ledgers &amp; Accounting Suite</p>
+                </div>
+            </div>
+            <p style="color: #333; font-size: 1rem; line-height: 1.7;">
+                A complete lightweight accounting app &mdash; purchase &amp; sale invoices, receipts, payments, stock management, ledgers, Trial Balance, and P&amp;L Statement, plus PDF invoices you can send straight to your client&rsquo;s WhatsApp.
+            </p>
+
+            <div class="app-feature-grid">
+                <div class="app-feature">
+                    <h4><i class="fas fa-lock" style="color: var(--red); margin-right: 6px;"></i>100% Local Data Storage</h4>
+                    <p>Your data stays on YOUR phone. No cloud storage, zero data leaks, complete privacy.</p>
+                </div>
+                <div class="app-feature">
+                    <h4><i class="fas fa-wifi" style="color: var(--red); margin-right: 6px;"></i>Works Completely Offline</h4>
+                    <p>One-time internet needed to install. After that, use it anywhere &mdash; no connection required.</p>
+                </div>
+                <div class="app-feature">
+                    <h4><i class="fas fa-mobile-screen-button" style="color: var(--red); margin-right: 6px;"></i>Easy Installation</h4>
+                    <p>No App Store or Play Store needed. Just open the link and select &ldquo;Add to Home Screen&rdquo;.</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--navy); font-size: 1.1rem; margin-top: 25px;"><i class="fas fa-tools" style="color: var(--red); margin-right: 8px;"></i>How to Operate &mdash; User Guide</h3>
+            <ul class="guide-list">
+                <li><span class="step-num">1</span><strong>Company Setup:</strong> Go to Settings and enter your Company Name, Address, Phone, Email, Bank Details, and Currency. This info appears on every PDF invoice you generate.</li>
+                <li><span class="step-num">2</span><strong>Chart of Accounts:</strong> Use Accounts Mgr to add your Customers, Suppliers, and other accounts (Assets, Liabilities, Capital, Revenue, Expenses).</li>
+                <li><span class="step-num">3</span><strong>Add Stock Items:</strong> Use Stock Mgr to add your inventory &mdash; item name, code, cost price, and retail price.</li>
+                <li><span class="step-num">4</span><strong>Purchase Invoices:</strong> Record incoming stock from suppliers under Purchase Invoices &mdash; quantities update automatically.</li>
+                <li><span class="step-num">5</span><strong>Sale Invoices:</strong> Create customer invoices under Sale Invoices, then Post and Print or save as PDF.</li>
+                <li><span class="step-num">6</span><strong>Receipts &amp; Payments:</strong> Record cash coming in under Receipts and cash going out under Payments against any account.</li>
+                <li><span class="step-num">7</span><strong>Journal Vouchers:</strong> Use Journal Vouchers for manual adjusting entries that don&rsquo;t fit a standard invoice, receipt, or payment.</li>
+                <li><span class="step-num">8</span><strong>Ledgers &amp; Reports:</strong> Check Ledgers for account statements, and Trial Balance / P&amp;L Statement for your overall financial position.</li>
+                <li><span class="step-num">9</span><strong>Backup &amp; Restore:</strong> Regularly download a Backup to your phone, and use Restore to load your data on any other device.</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <a href="https://2smarts.github.io/BM/" class="install-btn" target="_blank">
+                    <i class="fas fa-download"></i> Install Web App Now
+                </a>
+            </div>
+        </div>
+
+        <div class="coming-soon-card">
+            <i class="fas fa-plus-circle"></i>
+            <h3 style="color: var(--navy); margin-bottom: 8px;">More Free Apps Coming Soon</h3>
+            <p>We&rsquo;re building more free tools for different business needs. Check back for updates.</p>
         </div>
     </div>
 
